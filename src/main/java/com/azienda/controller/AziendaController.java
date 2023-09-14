@@ -18,6 +18,9 @@ import com.azienda.exceptions.EmployeeNotFoundException;
 import com.azienda.service.AziendaService;
 import com.azienda.utility.JsonResponseDTO;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping(value = "/aziendacrm/api")
 public class AziendaController {
@@ -54,6 +57,7 @@ public class AziendaController {
 				return ResponseEntity.ok(bodyRisposta);
 			}
 		}
+		log.error("L'id  {} inserito non esiste o non è corretto",numeroId);
 		bodyRisposta = new JsonResponseDTO<>(JsonResponseDTO.BAD_REQUEST, HttpStatus.BAD_REQUEST.value(),new EmployeeNotFoundException("Errore nella ricerca del dipendente,controlla il num inserito"));
 		return ResponseEntity.badRequest().body(bodyRisposta);
 
