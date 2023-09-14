@@ -1,0 +1,12 @@
+com\azienda\exceptions\EmployeeNotFoundException.class
+com\azienda\entity\Employee.class
+com\azienda\utility\JsonResponseDTO.class
+com\azienda\entity\Project.class
+com\azienda\service\AziendaService.class
+com\azienda\controller\AziendaController.class
+com\azienda\DTO\ProjectDTO.class
+com\azienda\AziendaCrmApplication.class
+com\azienda\repository\ProjectRepository.class
+com\azienda\DTO\EmployeeDTO.class
+com\azienda\exceptions\EmployeeCreationException.class
+com\azienda\repository\EmployeeRepository.class
